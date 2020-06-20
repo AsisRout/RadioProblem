@@ -95,7 +95,7 @@ class RadioSolver:
 
     def printAnswer(self):
         with open("results.txt", 'w') as output_file:
-            for state in self.stateband.keys():
+            for state in list(self.stateband):
                 output_file.write("%s\n" % (state + " " + self.stateband.pop(state)))
         print("Number of backtracks: "+str(self.back_track_counter))
 
@@ -195,8 +195,9 @@ if __name__ == '__main__':
     
     # Initially we map each state with a domain of radio bands possible (all bands)
     domains = {state: ['A', 'B', 'C', 'D'] for state in solver.states}
-    
+
     assigned_states = []
+    # Read constraints file line by line and set proper constraints to band domain for states.
     with open('legacy-constraints-1', 'r') as constraints:
         for line in constraints:
             if not line.strip():
@@ -208,7 +209,7 @@ if __name__ == '__main__':
             domains[state] = [band]
             assigned_states.append(state)
 
-    for state in solver.stateband.keys():
+    for state in list(solver.stateband):
         solver.prune_domains(state, solver.stateband[state], domains)
 
     result = solver.forward_check(assigned_states, domains,
