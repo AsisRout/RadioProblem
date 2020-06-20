@@ -177,6 +177,8 @@ if __name__ == '__main__':
     filename = "adjacent-states"
     max_neighbours_state = ""
     max_neighbours = 0
+    # Save all states and the adjacent states in array solver.states and solver.adjacent respectively.
+
     with open(filename, 'r') as adjacent_states:
         for line in adjacent_states:
             states = line.split()
@@ -188,9 +190,12 @@ if __name__ == '__main__':
                 max_neighbours = len(values)
                 max_neighbours_state = key
 
+    # Find state with maximum adjacent state 
     solver.max_neighbours_state = max_neighbours_state
+    
+    # Initially we map each state with a domain of radio bands possible (all bands)
     domains = {state: ['A', 'B', 'C', 'D'] for state in solver.states}
-
+    
     assigned_states = []
     with open('legacy-constraints-1', 'r') as constraints:
         for line in constraints:
