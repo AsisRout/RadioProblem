@@ -14,7 +14,9 @@ that (1) no two adjacent states share the same frequency, and (2) the states tha
 supports only one frequency are assigned to that frequency. 
 
 Program runs like :
-python radio.py legacy constraints file
+python main.py legacy constraints file
+
+To check all three files as input change the file namme in line no. 134 in main.py
 
 Ouput : on successful running results.txt will generate where you will get the output
 
