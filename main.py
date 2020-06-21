@@ -1,4 +1,10 @@
+import sys, os
+import logging
+import time
+import random
 
+# set debug level
+logging.basicConfig(level=logging.INFO)
 class RadioSolver:
     def __init__(self):
         self.states = []
