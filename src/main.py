@@ -213,7 +213,7 @@ if __name__ == '__main__':
         solver.prune_domains(state, solver.stateband[state], domains)
 
     result = solver.forward_check(assigned_states, domains,
-                         list(set(solver.states[:]) - set(assigned_states)))
+            list(set(solver.states[:]) - set(assigned_states)))
     if not result:
         print("No assignment possible")
     else:

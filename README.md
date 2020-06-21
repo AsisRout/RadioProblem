@@ -14,11 +14,13 @@ that (1) no two adjacent states share the same frequency, and (2) the states tha
 supports only one frequency are assigned to that frequency. 
 
 Program runs like :
-python radio.py legacy constraints file
+python3 main.py
 
 where legacy constraints file is an input to your program and has the legacy constraints listed in a format
 like this:
 Meghalaya A
 J&K B
 Odisha A
+
+Your output will be in file src/results.txt
 
