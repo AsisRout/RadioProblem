@@ -14,7 +14,7 @@ that (1) no two adjacent states share the same frequency, and (2) the states tha
 supports only one frequency are assigned to that frequency. 
 
 Program runs like :
-python main.py legacy constraints file
+python main.py legacy-constraints-1(or 2 or 3)
 
 To check all three files as input change the file namme in line no. 134 in main.py
 
