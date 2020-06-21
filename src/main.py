@@ -33,6 +33,7 @@ class RadioSolver:
         return True
 
     def printAnswer(self):
+        logging.debug("Frequency assignment is consistent : " + str(self.is_consistent()))
         with open("results.txt", 'w') as output_file:
             for state in list(self.stateband):
                 output_file.write("%s\n" % (state + " " + self.stateband.pop(state)))
