@@ -16,6 +16,8 @@ supports only one frequency are assigned to that frequency.
 Program runs like :
 python radio.py legacy constraints file
 
+Ouput : on successful running results.txt will generate where you will get the output
+
 where legacy constraints file is an input to your program and has the legacy constraints listed in a format
 like this:
 Meghalaya A
