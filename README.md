@@ -24,7 +24,7 @@ Odisha A
 
 Your output will be in file src/results.txt
 
-### Contributer
+### Group Members
 <ul>
   <li> <a href="https://github.com/AsisRout">Asis Rout</a> </li>
   <li><a href="https://github.com/Mksiyak">Mksiyak</a> </li>
